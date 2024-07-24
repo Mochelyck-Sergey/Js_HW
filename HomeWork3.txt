@@ -1,0 +1,31 @@
+// Вариант 1. Если более сложные данные для фильтрации данных. 
+Function pow(x,y){
+	let result = 1;
+	if (y===0){
+		return 1;
+	}
+	for (let i = 0: i<y;i++){
+		result *=x;
+	}
+	return result; 
+}
+
+//Вариант 2. Тоже самое только без иф.
+Function pow(x,y){
+	let result = 1;
+	for (let i = 0: i<y;i++){
+		result *=x;
+	}
+	return result; 
+}
+
+// Вариант 3. Через стандартный оператор. 
+function pow (x,y){
+	return x**y;
+}
+
+//Вариант 4. Тоже что и 3, только стрелочной. 
+Const pow = (x,y) => x**y;
+
+//Выводим везде одинаково. Подставляем значения 
+сonsole.log(pow(x,y));
