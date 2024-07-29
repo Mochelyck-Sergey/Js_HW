@@ -1,0 +1,24 @@
+function checkProbabilityTheory(count) {
+    let evenNumber = 0;
+    let oddNumber = 0;
+    
+    for (let i = 0; i < count; i++) {
+        const randomNumber = Math.floor(Math.random() * 901) + 100;
+        
+        if (randomNumber % 2 === 0) {
+            evenNumber++;
+        } else {
+            oddNumber++;
+        }
+    }
+    
+    const evenPercent = (evenNumber / count) * 100;
+    const oddPercent = (oddNumber / count) * 100;
+    
+    console.log(`Количество чисел: ${count}`);
+    console.log(`Парные числа: ${evenNumber}`);
+    console.log(`Не парные числа: ${oddNumber}`);
+    console.log(`Соотношение: ${evenPercent.toFixed(2)}% / ${oddPercent.toFixed(2)}%`);
+}
+
+checkProbabilityTheory(1000);
