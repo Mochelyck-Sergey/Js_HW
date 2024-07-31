@@ -1,0 +1,17 @@
+const laptop = {
+  brand: 'Apple',
+  model: 'MacBook Pro',
+  year: 2021,
+}
+
+laptop.getInfo = function() {
+  for (let property in this) {
+    if (typeof this[property] !== 'function') {
+      console.log(`${property}: ${this[property]}`);
+    }
+  }
+}
+laptop.chip = 'm1';
+laptop.display = 'Liquid Retina XDR'; 
+laptop.memory = '18GB';
+laptop.getInfo();
