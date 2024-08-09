@@ -1,0 +1,24 @@
+//Функция как я понял через массив надо было делать. 
+function findValueByKeyUsingArray(companyName) {
+  let companies = [company];
+
+  while (companies.length > 0) {
+    const currentCompany = companies.shift();
+
+    if (currentCompany.name === companyName) {
+      return currentCompany;
+    }
+
+    if (currentCompany.clients) {
+      companies = companies.concat(currentCompany.clients);
+    }
+    if (currentCompany.partners) {
+      companies = companies.concat(currentCompany.partners);
+    }
+  }
+
+  return null; 
+}
+
+
+console.log(findValueByKeyUsingArray('Клієнт 1.2'));// пример
